@@ -1,14 +1,29 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Articles</h1>
-
-<div id="articles">
-  <% @articles.each do |article| %>
-    <%= render article %>
-    <p>
-      <%= link_to "Show this article", article %>
+<div class="container container-fluid">
+  <div class="row">
+    <h1 class="col-lg-6">Articles</h1>
+    <p class="col-lg-6">
+      <%= link_to "New article", new_article_path %>
     </p>
-  <% end %>
+  </div>
+  <br>
+
+  <div class="">
+    <div id="articles" class="row">
+      <% @articles.each do |article| %>
+      <div class="card border-success ms-1 me-1 mt-2 col-12 col-lg-3">
+        <%= render article %>
+        <p class="card-footer card-link">
+          <%= link_to "Show this article", article %>
+        </p>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <p class="mt-2">
+    <%= paginate @articles %>
+  </p>
 </div>
 
-<%= link_to "New article", new_article_path %>
+

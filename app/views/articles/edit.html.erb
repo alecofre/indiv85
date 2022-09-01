@@ -1,10 +1,13 @@
 <h1>Editing article</h1>
 
-<%= render "form", article: @article %>
+<div class="container">
+<div class="card col-12 col-md-4">
+  <%= render "form", article: @article %>
+  <br>
 
-<br>
-
-<div>
-  <%= link_to "Show this article", @article %> |
-  <%= link_to "Back to articles", articles_path %>
+  <div class="card-footer">
+    <%= link_to "Show this article", @article %> |
+    <%= link_to "Back to articles", articles_path %>
+  </div>
+</div>
 </div>

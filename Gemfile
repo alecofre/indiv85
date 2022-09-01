@@ -66,4 +66,10 @@ end
 
 # Añadiendo la gema para traer bootstrap al proyecto
 gem "bootstrap"
+
+
+# Añadiendo la gema para usar "faker" para generar los 200 artículos
 gem "faker"
+
+# Añadiendo la gema "kaminari" para paginar la página principal
+gem "kaminari"
